@@ -46,7 +46,7 @@ nav{
 }
 .hero{
     height:80vh;
-    background-image: url(https://github.com/Saliente/saliente.github.io/blob/master/hero.jpg);
+    background-image: url(hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
