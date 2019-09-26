@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    font-family: 'Open Sans', sans-serif;
+}
+/*START LEFT CONTENT*/
+.left-column{
+    border-radius: 0.5rem;
+    width: 25vw;
+    float: left;
+    margin: auto 0.7rem 0.5rem 1rem;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#image{
+    border-radius: 0.5rem;
+}
+.image{
+    position: relative;
+}
+.image>h1{
+    position: absolute;
+    bottom: 0.1em;
+}
+.information{
+    color: #757575;
+    margin-top: 1em;
+}
+.paragraph{
+    padding-left: 1em;
+    margin: 1rem 0 1rem 0;
+
+}
+.icon{
+    color: #14b5ff;
+    font-size: 1.5rem;
+    width: 1.6rem;
+    text-align: center;
+    margin-right: 1em;
+}
+hr{
+    margin: 1em;
+    border: 0.04em solid #ccc;
+}
+/*SKILLS*/
+#skill{
+    padding-left: 1em;
+}
+.percent{
+    width: 22vw;
+    background-color: #ccc;
+    height: 1.3em;
+    border-radius: 1em;
+    margin: 0.5em;
+    display: block;
+}
+.nivel{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 1em;
+    height: 1.3em;
+    background-color: #14b5ff;
+    width: 50%;
+    text-align: center;
+    line-height: 1em;
+    color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1rem;
+}
+.skill-item{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.title-left{
+    color: #757575;
+}
+.skill-title{
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
+}
+/*SKILLS END*/
+/*END LEFT TABLE*/
+/*START RIGHT CONTENT*/
+.right-contain{
+    display: table;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.title-icon{
+    color: #14b5ff;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0.5em;
+    float: left;
+
+
+}
+.titles{
+    color: #757575;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0 2rem 5rem;
+
+}
+.paragraph-right{
+    text-align: justify;
+    margin: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 1rem;
+    text-indent: 2rem;
+}
+.h3-right{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    font-family: Roboto;
+    color: #757575;
+}
+.cal{
+    font-size: 1rem;
+}
+.data{
+    color: #14b5ff;
+    font-weight: normal;
+}
+.course{
+    margin-right: 0.5rem;
+    font-weight: normal;
+}
+span{
+    background-color: #14b5ff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-variant: small-caps;
+    padding: 0 0.5rem 0 0.5rem;
+}
+@media (max-width: 1200px) {
+    .right-contain{
+        width: 95vw;
+    }
+    .left-column{
+        display: table;
+        margin: 1rem;
+        width: 95vw;
+    }
+    .percent{
+        width: auto;
+    }
+    .paragraph{
+        float: left;
+        width: 33.3333%;
+    }
+    .title-left{
+        text-align: center;
+    }
+
+}
