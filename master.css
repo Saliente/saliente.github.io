@@ -141,7 +141,7 @@ span{
     font-variant: small-caps;
     padding: 0 0.5rem 0 0.5rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .right-contain{
         width: 95vw;
     }
