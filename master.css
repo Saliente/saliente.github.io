@@ -36,7 +36,7 @@
 
 }
 .icon{
-    color: #14b5ff;
+    color: #212121;
     font-size: 1.5rem;
     width: 1.6rem;
     text-align: center;
@@ -64,7 +64,7 @@ hr{
     padding: 0;
     border-radius: 1em;
     height: 1.3em;
-    background-color: #14b5ff;
+    background-color: #212121;
     width: 50%;
     text-align: center;
     line-height: 1em;
@@ -97,7 +97,7 @@ hr{
     margin-top: 5rem;
 }*/
 .title-icon{
-    color: #14b5ff;
+    color: #212121;
     font-size: 3rem;
     text-align: center;
     margin: 0.5em;
@@ -130,7 +130,7 @@ hr{
     font-size: 1rem;
 }
 .data{
-    color: #14b5ff;
+    color: #212121;
     font-weight: normal;
 }
 .course{
@@ -138,7 +138,7 @@ hr{
     font-weight: normal;
 }
 span{
-    background-color: #14b5ff;
+    background-color: #212121;
     color: #fff;
     border-radius: 4px;
     font-size: 1rem;
