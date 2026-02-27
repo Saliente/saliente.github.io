@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Pedro Dalcolli - Especialista em Redes (Network Engineer). Foco em Wi-Fi de alta performance, Routing, Security, Automação (Python) e projetos globais.">
+    <meta name="keywords" content="Network Engineer, Engenheiro de Redes, Cisco, Fortinet, Aruba, Meraki, Python, Ekahau, Wi-Fi, BGP, OSPF, L3, COP30, Especialista, LAN Enterprise, VLAN, STP, NAC">
+    <meta name="author" content="Pedro Dalcolli">
+    <meta property="og:title" content="Pedro Dalcolli - Senior Network Engineer">
+    <meta property="og:description" content="Especialista em Infraestrutura Enterprise, Wi-Fi de alta performance e Automação. Acesse meu portfólio e currículo completo.">
+    <meta property="og:type" content="profile">
+    
+    <title>Pedro Dalcolli - Network Engineer</title>
+    <style>
+        /* CSS Variáveis e Reset */
+        :root {
+            --primary-color: #005A9C;
+            --accent-color: #eaf2f8; /* Fundo do gatilho visual */
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --container-bg: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        
+        /* Layout Principal */
+        .container { max-width: 900px; margin: 40px auto; background: var(--container-bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        
+        /* Controles (Não aparecem no PDF) */
+        .controls { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .btn { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn-print { background-color: var(--primary-color); color: white; box-shadow: 0 2px 5px rgba(0,90,156,0.3); }
+        .btn-print:hover { background-color: #004080; transform: translateY(-2px); }
+        select { padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-weight: bold; background-color: white; cursor: pointer; }
+
+        /* Tipografia e Estrutura */
+        h1 { font-size: 2.8em; color: var(--primary-color); border-bottom: 3px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 15px; letter-spacing: -1px; }
+        h2 { font-size: 1.6em; color: var(--primary-color); margin-top: 35px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h3 { font-size: 1.25em; margin-top: 15px; color: #222; }
+        p { margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        /* Gatilho Visual - Resumo Profissional */
+        .summary-box {
+            background-color: var(--accent-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            font-size: 1.05em;
+            color: #1a1a1a;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+        }
+        .summary-box p:last-child { margin-bottom: 0; }
+        .summary-box strong { color: var(--primary-color); }
+
+        /* Tags de Skills */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .skill-tag { background: #e0eaf5; color: var(--primary-color); padding: 6px 12px; border-radius: 20px; font-size: 0.9em; font-weight: 600; border: 1px solid rgba(0,90,156,0.1); }
+
+        /* Classes de Idioma */
+        .lang { display: none; }
+        .lang.active { display: block; }
+        span.lang { display: none; }
+        span.lang.active { display: inline; }
+
+        /* Estilos de Impressão (ATS Friendly) */
+        @media print {
+            body { background: white; color: black; font-size: 11pt; }
+            .container { margin: 0; padding: 0; box-shadow: none; max-width: 100%; border-radius: 0; }
+            .no-print { display: none !important; }
+            h1 { font-size: 22pt; border-bottom: 2px solid black; color: black; margin-bottom: 10px; }
+            h2 { font-size: 14pt; border-bottom: 1px solid #ccc; color: black; margin-top: 20px; page-break-after: avoid; }
+            h3 { font-size: 12pt; page-break-after: avoid; font-weight: bold; }
+            
+            /* Ajuste do gatilho para impressão */
+            .summary-box { background-color: white !important; border-left: 3px solid black; padding: 10px 15px; margin: 15px 0; font-size: 11pt; box-shadow: none; }
+            .summary-box strong { color: black; }
+            
+            p, li { page-break-inside: avoid; margin-bottom: 6px; }
+            .job-entry { page-break-inside: avoid; margin-bottom: 15px; }
+            .skill-tag { border: 1px solid #999; background: transparent; color: black; padding: 4px 8px; border-radius: 4px; }
+            a { text-decoration: none; color: black; }
+            header p { margin-bottom: 5px; }
+            .print-validation { display: block; font-style: italic; font-size: 10pt; color: #555; margin-top: 5px; }
+        }
+        .print-validation { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="controls no-print">
+        <select id="langSwitch" onchange="changeLanguage()" aria-label="Escolha o idioma">
+            <option value="pt">Português (BR)</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+        <button class="btn btn-print" onclick="window.print()">
+            <span class="lang pt active">📄 Exportar para PDF</span>
+            <span class="lang en">📄 Export to PDF</span>
+            <span class="lang es">📄 Exportar a PDF</span>
+        </button>
+    </div>
+
+    <header>
+        <h1>Pedro Dalcolli</h1>
+        <p>
+            <strong>Email:</strong> <a href="mailto:pfsd21@gmail.com">pfsd21@gmail.com</a> | 
+            <strong><span class="lang pt active">Telefone:</span><span class="lang en">Phone:</span><span class="lang es">Teléfono:</span></strong> <a href="tel:+5511943767676">+55 11 943767676</a> <br>
+            <strong>Site / Portfólio:</strong> <a href="https://saliente.github.io" target="_blank">saliente.github.io</a> | 
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saliente/" target="_blank">in/saliente</a> <br>
+            <strong>Credly:</strong> <a href="https://www.credly.com/users/saliente/badges#credly" target="_blank">Badges</a> |
+            <strong>YouTube:</strong> <a href="https://www.youtube.com/@netskillscombr" target="_blank">@Netskills</a> <br>
+            <strong><span class="lang pt active">Localização:</span><span class="lang en">Location:</span><span class="lang es">Ubicación:</span></strong> Brasil 
+            <em>(<span class="lang pt active">Disponível para deslocamento global</span><span class="lang en">Available for global relocation</span><span class="lang es">Disponible para reubicación global</span>)</em>
+        </p>
+        <p class="print-validation"><span class="lang pt active">Valide as credenciais e experiências online acessando: saliente.github.io</span><span class="lang en">Validate credentials and experiences online at: saliente.github.io</span><span class="lang es">Valide las credenciales y experiencias en línea en: saliente.github.io</span></p>
+    </header>
+
+    <section>
+        <div class="summary-box">
+            <div class="lang pt active">
+                <p>Engenheiro de Redes L3/Especialista com histórico comprovado na liderança de deploys globais — incluindo a <strong>COP30</strong> e a infraestrutura das maiores <strong>Instituições Financeiras do Brasil</strong>. Atuo de forma autônoma na linha de frente e em total sinergia com times internacionais (Índia, UK, LATAM e Canadá).</p>
+                <p>Sou movido por uma paixão genuína por tecnologia, e não apenas pelo aspecto financeiro. Esse amor por entender como as coisas funcionam "debaixo do capô" me levou a estudar, aprofundar e dominar praticamente tudo o que norteia uma rede LAN (Enterprise). Se você busca alguém que vive e respira infraestrutura, vamos conversar.</p>
+            </div>
+            <div class="lang en">
+                <p>L3/Specialist Network Engineer with a proven track record leading global deployments — including <strong>COP30</strong> and the infrastructure for Brazil's largest <strong>Financial Institutions</strong>. I operate autonomously on the front lines in seamless synergy with international teams (India, UK, LATAM, and Canada).</p>
+                <p>I am driven by a genuine passion for technology, not just by financial rewards. This love for understanding how things work "under the hood" has led me to study, dive deep, and master almost everything surrounding an Enterprise LAN network. If you're looking for someone who lives and breathes infrastructure, let's connect.</p>
+            </div>
+            <div class="lang es">
+                <p>Ingeniero de Redes L3/Especialista con un historial comprobado liderando despliegues globales — incluyendo la <strong>COP30</strong> y la infraestructura de las mayores <strong>Instituciones Financieras de Brasil</strong>. Opero de forma autónoma en la primera línea y en total sinergia con equipos internacionales (India, UK, LATAM y Canadá).</p>
+                <p>Me impulsa una pasión genuina por la tecnología, más allá del aspecto financiero. Este amor por entender cómo funcionan las cosas "bajo el capó" me ha llevado a estudiar, profundizar y dominar prácticamente todo lo que rodea a una red LAN (Enterprise). Si buscas a alguien que viva y respire infraestructura, hablemos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="lang pt active">Certificações e Tecnologias Core</span><span class="lang en">Core Certifications & Technologies</span><span class="lang es">Certificaciones y Tecnologías Core</span></h2>
+        <div class="skills-container">
+            <span class="skill-tag">Aruba SDWAN Specialist</span>
+            <span class="skill-tag">Riverbed SDWAN Professional</span>
+            <span class="skill-tag">CCNA & CCNP</span>
+            <span class="skill-tag">CCIE Wireless (In progress)</span>
+            <span class="skill-tag">NSE4 & NSE6 Fortinet</span>
+            <span class="skill-tag">Routing & Switching (L2/L3)</span>
+            <span class="skill-tag">Python Automation (LLD/HLD)</span>
+            <span class="skill-tag">Ekahau AI Pro</span>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="lang pt active">Experiência Profissional</span><span class="lang en">Professional Experience</span><span class="lang es">Experiencia Profesional</span></h2>
+
+        <div class="job-entry">
+            <h3>NTT - <span class="lang pt active">Especialista de Infraestrutura (BU Wireless)</span><span class="lang en">Infrastructure Specialist (Wireless BU)</span><span class="lang es">Especialista de Infraestructura (BU Wireless)</span></h3>
+            <ul class="lang pt active">
+                <li><strong>Deploy Autônomo e Comprovado:</strong> Execução de projetos de alta complexidade realizando o deploy majoritariamente de forma autônoma (solo), garantindo a entrega de ponta a ponta.</li>
+                <li><strong>Projetos de Grande Escala:</strong> Atuação de destaque em projetos críticos nacionais, como a infraestrutura para a <strong>COP30</strong> e para as maiores Instituições Financeiras do Brasil.</li>
+                <li><strong>Atuação Global e Sinergia:</strong> Forte experiência internacional liderando projetos dentro e fora do Brasil (ex: Panamá), trabalhando em harmonia com times globais na Índia, Reino Unido, México e Canadá.</li>
+                <li><strong>Tecnologia e Performance:</strong> Desenvolvimento de redes Wi-Fi focadas em substituir e superar a performance de redes cabeadas (WLC9800, APs Juniper Mist AI, Cisco Catalyst, Meraki, FortiAP, Aruba).</li>
+                <li><strong>Segurança e Routing:</strong> Deploy de redes com Cisco ISE, Palo Alto (Global Protect, IPSec, SAML) e FortiGate (BGP, OSPF, ADVPN, SDWAN, Wireless e Switch Management).</li>
+                <li><strong>Automação e Design:</strong> Referência interna em automação para documentação LLD/HLD usando Python e referência técnica em Ekahau (troubleshooting e criação de templates personalizados).</li>
+            </ul>
+            <ul class="lang en">
+                <li><strong>Proven Autonomous Deployment:</strong> End-to-end execution of high-complexity projects, operating largely autonomously (solo deployment).</li>
+                <li><strong>Large-Scale Projects:</strong> Key role in critical infrastructure projects, including <strong>COP30</strong> and the largest Financial Institutions in Brazil.</li>
+                <li><strong>Global Reach & Synergy:</strong> Strong international project experience inside and outside Brazil (e.g., Panama), working in harmony with global teams from India, the UK, Mexico, and Canada.</li>
+                <li><strong>Technology & Performance:</strong> Development of Wi-Fi networks aimed at matching/exceeding wired performance (WLC9800, Juniper Mist AI, Cisco Catalyst, Meraki, FortiAP, Aruba).</li>
+                <li><strong>Security & Routing:</strong> Network deployments using Cisco ISE, Palo Alto (Global Protect, IPSec, SAML), and FortiGate (BGP, OSPF, ADVPN, SDWAN, Wireless and Switch Management).</li>
+                <li><strong>Automation & Design:</strong> Internal SME for LLD/HLD documentation automation using Python, and Ekahau technical reference for troubleshooting and custom templates.</li>
+            </ul>
+            <ul class="lang es">
+                <li><strong>Despliegue Autónomo Comprobado:</strong> Ejecución de proyectos de alta complejidad realizando el despliegue de forma mayoritariamente autónoma (en solitario), garantizando la entrega de principio a fin.</li>
+                <li><strong>Proyectos de Gran Escala:</strong> Participación destacada en proyectos críticos, como la infraestructura para <strong>COP30</strong> y las mayores Instituciones Financieras de Brasil.</li>
+                <li><strong>Alcance Global y Sinergia:</strong> Fuerte experiencia internacional en proyectos dentro y fuera de Brasil (ej. Panamá), trabajando en armonía con equipos globales de India, Reino Unido, México y Canadá.</li>
+                <li><strong>Tecnología y Rendimiento:</strong> Desarrollo de redes Wi-Fi enfocadas en superar el rendimiento cableado (WLC9800, Juniper Mist AI, Cisco Catalyst, Meraki, FortiAP, Aruba).</li>
+                <li><strong>Seguridad y Routing:</strong> Despliegues con Cisco ISE, Palo Alto (Global Protect, IPSec, SAML) y FortiGate (BGP, OSPF, ADVPN, SDWAN, Wireless y Switch Management).</li>
+                <li><strong>Automatización y Diseño:</strong> Referente interno en automatización de LLD/HLD con Python y referente técnico en Ekahau (troubleshooting y creación de plantillas personalizadas).</li>
+            </ul>
+        </div>
+
+        <div class="job-entry">
+            <h3>NSB - <span class="lang pt active">Suporte Outsourcing L3 (Agronegócio)</span><span class="lang en">L3 Outsourcing Support (Agribusiness)</span><span class="lang es">Soporte Outsourcing L3 (Agronegocio)</span></h3>
+            <ul class="lang pt active">
+                <li>Sustentação de ambiente LATAM, com atendimento em Espanhol (clientes) e Inglês (TAC Riverbed).</li>
+                <li>Gerenciamento de redes Cisco, Alcatel e Riverbed, integrando DMVPN, BGP, EIGRP e OSPF entre plataformas.</li>
+                <li>Manutenção de interligação entre rede LAN e rede OT via firewall Fortinet.</li>
+                <li><strong>Routing, Switching & NAC:</strong> Suporte avançado abrangendo desde fundamentos de rede e L2 (VLANs, STP/RSTP/MSTP, Port Security, mac-sticky) até políticas complexas de controle de acesso (802.1X, MAB, ACLs, DHCP Snooping) integradas ao Cisco ISE.</li>
+            </ul>
+            <ul class="lang en">
+                <li>LATAM environment support, providing customer service in Spanish and communicating with Riverbed TAC in English.</li>
+                <li>Managed Cisco, Alcatel, and Riverbed networks, integrating DMVPN, BGP, EIGRP, and OSPF.</li>
+                <li>Maintained LAN and OT network interconnections via Fortinet firewalls.</li>
+                <li><strong>Routing, Switching & NAC:</strong> Advanced support covering network fundamentals and L2 switching (VLANs, STP/RSTP/MSTP, Port Security, mac-sticky) up to complex access control policies (802.1X, MAB, ACLs, DHCP Snooping) integrated with Cisco ISE.</li>
+            </ul>
+            <ul class="lang es">
+                <li>Soporte de entorno LATAM, con atención en Español a clientes y en Inglés con TAC Riverbed.</li>
+                <li>Gestión de redes Cisco, Alcatel y Riverbed, integrando DMVPN, BGP, EIGRP y OSPF.</li>
+                <li>Mantenimiento de interconexión entre red LAN y red OT a través de firewalls Fortinet.</li>
+                <li><strong>Routing, Switching & NAC:</strong> Soporte avanzado abarcando desde fundamentos de red y L2 (VLANs, STP/RSTP/MSTP, Port Security, mac-sticky) hasta políticas complejas de control de acceso (802.1X, MAB, ACLs, DHCP Snooping) integradas con Cisco ISE.</li>
+            </ul>
+        </div>
+
+        <div class="job-entry">
+            <h3>Sistemar - <span class="lang pt active">Responsável L3 Deploy</span><span class="lang en">L3 Deploy Lead</span><span class="lang es">Responsable L3 Deploy</span></h3>
+            <ul class="lang pt active">
+                <li>Deploy de servidores internos para outsourcing: Zabbix, Grafana, GLPI, Netbox, HAProxy, Nginx, Truenas.</li>
+                <li>Administração de ambientes VMWare ESX e XCP (Xen) utilizando distribuições BSD, Ubuntu, OpenSUSE e Oracle Linux.</li>
+                <li>Suporte a mais de 200 firewalls pfSense, gerenciando openVPN e IPSec entre clientes.</li>
+            </ul>
+            <ul class="lang en">
+                <li>Deployed internal servers for outsourcing: Zabbix, Grafana, GLPI, Netbox, HAProxy, Nginx, Truenas.</li>
+                <li>Administered VMWare ESX and XCP (Xen) environments using BSD, Ubuntu, OpenSUSE, and Oracle Linux.</li>
+                <li>Supported over 200 pfSense firewalls, managing openVPN and IPSec tunnels.</li>
+            </ul>
+            <ul class="lang es">
+                <li>Despliegue de servidores internos: Zabbix, Grafana, GLPI, Netbox, HAProxy, Nginx, Truenas.</li>
+                <li>Administración de entornos VMWare ESX y XCP (Xen) utilizando distribuciones Linux y BSD.</li>
+                <li>Soporte a más de 200 firewalls pfSense, gestionando openVPN e IPSec.</li>
+            </ul>
+        </div>
+
+        <div class="job-entry">
+            <h3>RGK4IT - <span class="lang pt active">Suporte Outsourcing NOC L2</span><span class="lang en">L2 NOC Outsourcing Support</span><span class="lang es">Soporte Outsourcing NOC L2</span></h3>
+            <p class="lang pt active">Suporte L2 focado em redes Fortinet, Cisco, Aruba, Tricon e H3C. Administração de servidores Linux voltados para telefonia (Issabel, Asterisk) operando em Oracle Linux/MySQL sobre infraestrutura VMWare vCenter.</p>
+            <p class="lang en">L2 support focused on Fortinet, Cisco, Aruba, Tricon, and H3C networks. Administration of Linux telephony servers (Issabel, Asterisk) on Oracle Linux/MySQL over VMWare vCenter.</p>
+            <p class="lang es">Soporte L2 centrado en redes Fortinet, Cisco, Aruba, Tricon y H3C. Administración de servidores Linux para telefonía sobre infraestructura VMWare vCenter.</p>
+        </div>
+
+        <div class="job-entry">
+            <h3>Multivida (Hold Athena Saúde) - <span class="lang pt active">Analista de Redes</span><span class="lang en">Network Analyst</span><span class="lang es">Analista de Redes</span></h3>
+            <p class="lang pt active">Sustentação de redes hospitalares. Deploy de +1000 PCs via MDT em 1 semana. Configuração de Windows Print Server integrado com GPO para realização de instalação de +300 impressoras. Inauguração e sustentação de 20 unidades remotas. Migração de SonicWall para Fortinet e administração de PBX 3CX.</p>
+            <p class="lang en">Unidade network support. Deployed 1000+ PCs via MDT in 1 week. Configured Windows Print Server linked to GPO and installed 300+ printers. Supported 20 remote branches. Migrated from SonicWall to Fortinet and administered 3CX PBX.</p>
+            <p class="lang es">Soporte de redes hospitalarias. Despliegue de +1000 PCs mediante MDT en 1 semana. Configuración de Windows Print Server conectado a GPO e instalación de +300 impresoras. Migración de SonicWall a Fortinet y administración de PBX 3CX.</p>
+        </div>
+        
+        <div class="job-entry">
+            <h3>Valerio Soluções - <span class="lang pt active">Técnico de Redes Residenciais</span><span class="lang en">Residential Network Technician</span><span class="lang es">Técnico de Redes Residenciales</span></h3>
+            <p class="lang pt active">Atendimento a usuários finais, instalação de fibra óptica em condomínios, sistemas de controle de acesso, câmeras e alarmes.</p>
+            <p class="lang en">End-user support, fiber optic installation in condominiums, access control systems, cameras, and alarms.</p>
+            <p class="lang es">Soporte a usuarios finales, instalación de fibra óptica en condominios, sistemas de control de acceso, cámaras y alarmas.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2><span class="lang pt active">Projetos Pessoais & Hobbies</span><span class="lang en">Personal Projects & Hobbies</span><span class="lang es">Proyectos Personales y Hobbies</span></h2>
+        <ul class="lang pt active">
+            <li><strong>Homelab:</strong> Gestão de um servidor Linux virtualizado com Proxmox para testes e desenvolvimento de aplicações próprias.</li>
+            <li><strong>Criador de Conteúdo:</strong> Administra o canal do YouTube <em>Netskills</em> compartilhando conhecimento técnico de redes e infraestrutura.</li>
+            <li><strong>Hobbies:</strong> Fazer deploy de servidores por diversão e apreciar uma boa cerveja (o famoso combo Tech & Beer).</li>
+            <li><strong>Idiomas:</strong> Português (Nativo), Inglês e Espanhol (Profissional). Aventurando-se no Italiano e no Chinês.</li>
+        </ul>
+        <ul class="lang en">
+            <li><strong>Homelab:</strong> Managing a virtualized Linux server with Proxmox for testing and personal application development.</li>
+            <li><strong>Content Creator:</strong> Runs the <em>Netskills</em> YouTube channel sharing networking and infrastructure technical knowledge.</li>
+            <li><strong>Hobbies:</strong> Deploying servers for fun and enjoying a good beer (the classic Tech & Beer combo).</li>
+            <li><strong>Languages:</strong> Portuguese (Native), English, and Spanish (Professional). Currently dabbling in Italian and Chinese.</li>
+        </ul>
+        <ul class="lang es">
+            <li><strong>Homelab:</strong> Gestión de un servidor Linux virtualizado con Proxmox para pruebas y desarrollo de aplicaciones.</li>
+            <li><strong>Creador de Contenido:</strong> Administra el canal de YouTube <em>Netskills</em> compartiendo conocimientos técnicos de redes.</li>
+            <li><strong>Hobbies:</strong> Desplegar servidores por diversión y disfrutar de una buena cerveza (el combo Tech & Beer).</li>
+            <li><strong>Idiomas:</strong> Portugués (Nativo), Inglés y Español (Profesional). Incursionando en Italiano y Chino.</li>
+        </ul>
+    </section>
+</div>
+
+<script>
+    function changeLanguage() {
+        const selectedLang = document.getElementById("langSwitch").value;
+        const allLangs = document.querySelectorAll('.lang');
+        
+        allLangs.forEach(el => {
+            el.classList.remove('active');
+            if (el.classList.contains(selectedLang)) {
+                el.classList.add('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
